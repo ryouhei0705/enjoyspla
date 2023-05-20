@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { initializeWeapons } from './arrayUtils';
 interface CellData {
     value1: string;
     value2: string;
@@ -8,8 +8,8 @@ interface CellData {
 
 const Bingo = () => {
     const [board, setBoard] = useState<CellData[][]>([]);
-    const weapons = ['A', 'B', 'C', 'D', 'E'];
-    const rules = ['1', '2', '3', '4', '5'];
+    const weapons = initializeWeapons();
+    const rules = ['ガチエリア', 'ガチヤグラ', 'ガチホコ', 'ガチアサリ', 'ナワバリ'];
 
     useEffect(() => {
         initializeBoard();
@@ -51,8 +51,8 @@ const Bingo = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <h1 className="text-3xl font-bold mb-8">Bingo Game</h1>
-            <table className="border-collapse">
+            <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
+            <table className="border-collapse bg-red">
                 <tbody>
                     {board.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -62,14 +62,16 @@ const Bingo = () => {
                                     onClick={() => handleClick(rowIndex, colIndex)}
                                     className={`py-4 px-6 border ${cell.marked ? 'bg-green-200' : 'bg-white'
                                         }`}
+                                    style={{ width: '8rem', height: '8rem' }} // セルの高さと幅を指定
                                 >
-                                    <div className="flex items-center justify-center h-10 w-10 rounded-full bg-blue-500 text-white text-lg font-bold">
+                                    <div className="flex items-center justify-center text-gray-500 font-bold">
                                         {cell.value1}
                                     </div>
                                     <div className="text-xs text-gray-500 mt-1">
                                         {cell.value2}
                                     </div>
                                 </td>
+
                             ))}
                         </tr>
                     ))}
