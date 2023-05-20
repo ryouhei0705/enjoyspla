@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useCallback } from 'react';
+import React, { useState, useEffect,useCallback,useMemo } from 'react';
 import { initializeWeapons } from './arrayUtils';
 interface CellData {
     value1: string;
@@ -8,8 +8,8 @@ interface CellData {
 
 const Bingo = () => {
     const [board, setBoard] = useState<CellData[][]>([]);
-    const weapons = initializeWeapons();
-    const rules = ['ガチエリア', 'ガチヤグラ', 'ガチホコ', 'ガチアサリ', 'ナワバリ'];
+    const weapons = useMemo(() => initializeWeapons(),[]);
+    const rules = useMemo(() =>['ガチエリア', 'ガチヤグラ', 'ガチホコ', 'ガチアサリ', 'ナワバリ'],[]);
 
     const initializeBoard = useCallback(() => {
         const newBoard: CellData[][] = [];
@@ -28,7 +28,7 @@ const Bingo = () => {
         }
 
         setBoard(newBoard);
-    },[]);
+    },[weapons,rules]);
 
     useEffect(() => {
         initializeBoard();
