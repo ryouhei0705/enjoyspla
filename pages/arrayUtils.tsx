@@ -1,3 +1,4 @@
+import React from 'react';
 export const initializeWeapons = (): string[] => {
     return [
         'ボールドマーカー',
