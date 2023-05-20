@@ -15,7 +15,7 @@ const Bingo = () => {
 
     return (
         // <div>
-        //     <h1>Bingo Game</h1>
+            <h1>Bingo Game</h1>
         //     <table>
         //         <tbody>
         //             {board.map((row, rowIndex) => (
