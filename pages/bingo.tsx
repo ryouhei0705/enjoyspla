@@ -14,22 +14,22 @@ const Bingo = () => {
     };
 
     return (
-        <div>
-            <h1>Bingo Game</h1>
-            <table>
-                <tbody>
-                    {board.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {row.map((cell, colIndex) => (
-                                <td key={colIndex} onClick={() => handleClick(rowIndex, colIndex)}>
-                                    {cell}
-                                </td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        // <div>
+        //     <h1>Bingo Game</h1>
+        //     <table>
+        //         <tbody>
+        //             {board.map((row, rowIndex) => (
+        //                 <tr key={rowIndex}>
+        //                     {row.map((cell, colIndex) => (
+        //                         <td key={colIndex} onClick={() => handleClick(rowIndex, colIndex)}>
+        //                             {cell}
+        //                         </td>
+        //                     ))}
+        //                 </tr>
+        //             ))}
+        //         </tbody>
+        //     </table>
+        // </div>
     );
 };
 
