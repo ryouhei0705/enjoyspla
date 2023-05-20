@@ -82,3 +82,9 @@ export const initializeWeapons = (): string[] => {
         'ドライブワイパー',
     ];
 };
+
+const ArrayUtils = () => {
+    // Reactコンポーネントの内容
+};
+
+export default ArrayUtils;
