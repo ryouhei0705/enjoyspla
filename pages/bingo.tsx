@@ -13,7 +13,7 @@ const Bingo = () => {
 
     useEffect(() => {
         initializeBoard();
-    }, []);
+    }, [setBoard]);
 
     const initializeBoard = () => {
         const newBoard: CellData[][] = [];
