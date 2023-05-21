@@ -85,7 +85,7 @@ const Bingo = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{ maxWidth: '100%' }}>
             <Head>
-                <title>エンジョイスプラ</title>
+                <title>スプラビンゴ</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
