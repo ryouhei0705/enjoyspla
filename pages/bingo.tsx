@@ -1,15 +1,38 @@
 import React, { useState, useEffect,useCallback,useMemo } from 'react';
 import { initializeWeapons } from './arrayUtils';
+import Image from 'next/image';
+import { Rule } from 'postcss';
 interface CellData {
     value1: string;
     value2: string;
+    value1Image: string;
+    value2Image: string;
     marked: boolean;
 }
 
+interface ValueDate{
+    name: string;
+    imageUrl: string;
+}
+
+const weapons:ValueDate[] = [
+    { name: 'ボールドマーカー', imageUrl: '/images/borudomaka.png' },
+    { name: 'ボールドマーカーネオ', imageUrl: '/images/borudomakaneo.png' },
+    { name: 'わかばシューター', imageUrl: '/images/wakabasyuta.png' },
+    { name: 'もみじシューター', imageUrl: '/images/momizisyuta.png' },
+    { name: 'シャープマーカー', imageUrl: '/images/syapumaka.png' },
+];
+
+const rules: ValueDate[] = [
+    { name: 'ガチエリア', imageUrl: '/images/gatieria.webp' },
+    { name: 'ガチヤグラ', imageUrl: '/images/gatiyagura.webp' },
+    { name: 'ガチホコ', imageUrl: '/images/gatihoko.webp' },
+    { name: 'ガチアサリ', imageUrl: '/images/gatiasari.webp' },
+    { name: 'ナワバリ', imageUrl: '/images/nawabari.webp' },
+];
+
 const Bingo = () => {
     const [board, setBoard] = useState<CellData[][]>([]);
-    const weapons = useMemo(() => initializeWeapons(),[]);
-    const rules = useMemo(() =>['ガチエリア', 'ガチヤグラ', 'ガチホコ', 'ガチアサリ', 'ナワバリ'],[]);
 
     const initializeBoard = useCallback(() => {
         const newBoard: CellData[][] = [];
@@ -17,10 +40,15 @@ const Bingo = () => {
         for (let row = 0; row < 5; row++) {
             const newRow: CellData[] = [];
             for (let col = 0; col < 5; col++) {
+                const weapon:ValueDate = getRandomElement(weapons);
+                const rule: ValueDate = getRandomElement(rules);
+
                 const cellData: CellData = {
-                    value1: getRandomElement(weapons),
-                    value2: getRandomElement(rules),
-                    marked: false,
+                    value1: weapon.name,
+                    value2: rule.name,
+                    value1Image: weapon.imageUrl,
+                    value2Image: rule.imageUrl,
+                    marked: false,                   
                 };
                 newRow.push(cellData);
             }
@@ -46,10 +74,12 @@ const Bingo = () => {
         initializeBoard();
     };
 
-    const getRandomElement = (array: string[]) => {
+    const getRandomElement = (array: ValueDate[]) => {
         const randomIndex = Math.floor(Math.random() * array.length);
         return array[randomIndex];
     };
+
+    
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -64,7 +94,7 @@ const Bingo = () => {
                                     onClick={() => handleClick(rowIndex, colIndex)}
                                     className={`py-4 px-6 border ${cell.marked ? 'bg-green-200' : 'bg-white'
                                         }`}
-                                    style={{ width: '8rem', height: '8rem' }} // セルの高さと幅を指定
+                                    style={{ flexBasis: 'calc(100% / 5)' }}
                                 >
                                     <div className="flex items-center justify-center text-gray-500 font-bold">
                                         {cell.value1}
@@ -72,6 +102,8 @@ const Bingo = () => {
                                     <div className="text-xs text-gray-500 mt-1">
                                         {cell.value2}
                                     </div>
+                                    {/* <img src={cell.value1Image} alt="写真" className="w-full h-full" />
+                                    <img src={cell.value2Image} alt="写真" className="w-full h-full" /> */}
                                 </td>
 
                             ))}
@@ -83,7 +115,7 @@ const Bingo = () => {
                 className="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
                 onClick={regenerateBoard}
             >
-                Regenerate Board
+                New Bingo
             </button>
         </div>
     );
