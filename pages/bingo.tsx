@@ -82,9 +82,9 @@ const Bingo = () => {
     
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{ maxWidth: '100%' }}>
             <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
-            <table className="border-collapse bg-red">
+            <table className="border-collapse bg-red max-w-full">
                 <tbody>
                     {board.map((row, rowIndex) => (
                         <tr key={rowIndex}>
