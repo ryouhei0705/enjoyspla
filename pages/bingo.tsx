@@ -2,6 +2,7 @@ import React, { useState, useEffect,useCallback,useMemo } from 'react';
 import { initializeWeapons } from './arrayUtils';
 import Image from 'next/image';
 import { Rule } from 'postcss';
+import Head from 'next/head';
 interface CellData {
     value1: string;
     value2: string;
@@ -83,6 +84,10 @@ const Bingo = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{ maxWidth: '100%' }}>
+            <Head>
+                <title>エンジョイスプラ</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
             <table className="border-collapse bg-red max-w-full">
                 <tbody>
