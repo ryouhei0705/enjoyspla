@@ -85,7 +85,6 @@ const Bingo = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{ maxWidth: '100%' }}>
             <Head>
-                <title>スプラビンゴ</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
@@ -99,7 +98,7 @@ const Bingo = () => {
                                     onClick={() => handleClick(rowIndex, colIndex)}
                                     className={`py-4 px-6 border ${cell.marked ? 'bg-green-200' : 'bg-white'
                                         }`}
-                                    style={{ flex: '1 0 calc(100% / 5)' }}
+                                    style={{ flex: '1 0 calc(100% / 5)' }}                 
                                 >
                                     <div className="flex items-center justify-center text-gray-500 font-bold h-12">
                                         {cell.value1}
