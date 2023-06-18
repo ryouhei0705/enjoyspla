@@ -96,7 +96,7 @@ const Bingo = () => {
                                 <td
                                     key={colIndex}
                                     onClick={() => handleClick(rowIndex, colIndex)}
-                                    className={`py-4 px-6 border w-[20vmin] h-[20vmin] ${cell.marked ? 'bg-green-200' : 'bg-white'
+                                    className={`py-4 px-6 border w-[20vw] h-[20vw] ${cell.marked ? 'bg-green-200' : 'bg-white'
                                         }`}            
                                 >
                                     <div className="flex items-center justify-center text-gray-500 font-bold h-12">
