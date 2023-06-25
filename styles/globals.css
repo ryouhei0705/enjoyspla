@@ -25,3 +25,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+html {
+  /* デフォルト（モバイルビュー）ではベースのfont-sizeは12px相当 */
+  font-size: 75%;
+}
+
+@media screen and (min-width:768px) {
+  html {
+    /* タブレットビューではベースのfont-sizeは14px相当 */
+    font-size: 87.5%;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  html {
+    /* デスクトップビューではベースのfont-sizeは16px相当 */
+    font-size: 100%;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect,useCallback,useMemo } from 'react';
+import styles from '@/styles/bingo.module.scss'
 import { initializeWeapons } from './arrayUtils';
 import Image from 'next/image';
 import { Rule } from 'postcss';
@@ -83,12 +84,12 @@ const Bingo = () => {
     
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{ maxWidth: '100%' }}>
+        <div className={styles.all}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <h1 className="text-3xl font-bold mb-8 text-gray-500">Bingo Game</h1>
-            <table className="border-collapse bg-red max-w-full">
+            <h1 className={styles.title}>Bingo Game</h1>
+            <table className={styles.bingoTable}>
                 <tbody>
                     {board.map((row, rowIndex) => (
                         <tr key={rowIndex}>
@@ -96,15 +97,20 @@ const Bingo = () => {
                                 <td
                                     key={colIndex}
                                     onClick={() => handleClick(rowIndex, colIndex)}
-                                    className={`py-4 px-6 border w-[100px] h-[100px] ${cell.marked ? 'bg-green-200' : 'bg-white'
-                                        }`}            
+                                    className={styles.bingoCell}          
                                 >
-                                    <div className="flex items-center justify-center text-gray-500 font-bold h-12">
+                                    <div className={styles.weapon}>
+                                        {cell.value1}
+                                    </div>
+                                    <div className={styles.stage}>
+                                        {cell.value2}
+                                    </div>
+                                    {/* <div className="flex items-center justify-center text-gray-500 font-bold h-12">
                                         {cell.value1}
                                     </div>
                                     <div className="text-xs text-gray-500 mt-1 h-4">
                                         {cell.value2}
-                                    </div>
+                                    </div> */}
                                     {/* <img src={cell.value1Image} alt="写真" className="w-full h-full" />
                                     <img src={cell.value2Image} alt="写真" className="w-full h-full" /> */}
                                 </td>
@@ -115,7 +121,7 @@ const Bingo = () => {
                 </tbody>
             </table>
             <button
-                className="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className={styles.regenerate}
                 onClick={regenerateBoard}
             >
                 New Bingo
