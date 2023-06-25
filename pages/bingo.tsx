@@ -97,7 +97,9 @@ const Bingo = () => {
                                 <td
                                     key={colIndex}
                                     onClick={() => handleClick(rowIndex, colIndex)}
-                                    className={styles.bingoCell}          
+                                    // className={styles.bingoCell }   
+                                    className={`${cell.marked ? styles.cellMarked : styles.cellNoMarke}`}
+                                    // style={cell.marked ? 'background: green': 'background: white'}   
                                 >
                                     <div className={styles.weapon}>
                                         {cell.value1}
