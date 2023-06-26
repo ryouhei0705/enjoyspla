@@ -6,7 +6,7 @@ import HamburgerMenu from '../components/HamburgerMenu'
 const Home = () => {
   return (
     <div>
-      <HamburgerMenu />
+      {/* <HamburgerMenu /> */}
       <Head>
         <title>エンジョイスプラ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
