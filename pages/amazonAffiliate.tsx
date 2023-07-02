@@ -18,9 +18,9 @@ const AmazonAffiliate = () => {
                 <div className={styles.child}>
                     <a href="https://www.amazon.co.jp/dp/B0BZHQVHD3?_encoding=UTF8&aaxitk=8ee47afcf90ed648c2bae2151e068305&content-id=amzn1.sym.ea91fbda-5568-44df-b5b0-99202f731686%3Aamzn1.sym.ea91fbda-5568-44df-b5b0-99202f731686&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=1ea5c293-c35e-4ef4-9eb5-81a601e7cfec&pd_rd_w=IVN49&pd_rd_wg=f4dVo&qid=1688309053&sr=1-2-ac08f2b1-eb5b-4f1a-aa64-9e8f448c33ed&th=1&linkCode=li3&tag=ryouhei0705-22&linkId=ba769e55d8967fdf33053bc75fa5b524&language=ja_JP&ref_=as_li_ss_il" target="_blank" rel="noreferrer"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BZHQVHD3&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ryouhei0705-22&language=ja_JP" ></img></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=ryouhei0705-22&language=ja_JP&l=li3&o=9&a=B0BZHQVHD3" width="1" height="1" alt="" ></img>
                 </div>
-                <div className={styles.child}>
+                {/* <div className={styles.child}>
                     <a href="https://www.amazon.co.jp/%E4%BB%BB%E5%A4%A9%E5%A0%82-amiibo-%E3%82%A4%E3%82%AB%E3%80%90%E3%83%8D%E3%82%AA%E3%83%B3%E3%83%91%E3%83%BC%E3%83%97%E3%83%AB%E3%80%91-%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B072FH4TPK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1K5V5TCN5LW5D&keywords=%E3%82%B9%E3%83%97%E3%83%A9&qid=1688309386&sprefix=%E3%82%B9%E3%83%97%E3%83%A9%2Caps%2C357&sr=8-7&th=1&linkCode=li3&tag=ryouhei0705-22&linkId=dc76cc6d2a3af723748b1b0ccc0e487b&language=ja_JP&ref_=as_li_ss_il" target="_blank" rel="noreferrer"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B072FH4TPK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ryouhei0705-22&language=ja_JP" ></img></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=ryouhei0705-22&language=ja_JP&l=li3&o=9&a=B072FH4TPK" width="1" height="1" alt="" ></img>
-                </div>
+                </div> */}
             </div>
         </div>
     )
