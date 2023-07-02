@@ -126,7 +126,7 @@ const Bingo = () => {
                 className={styles.regenerate}
                 onClick={regenerateBoard}
             >
-                New Bingo
+                再生成
             </button>
         </div>
     );
