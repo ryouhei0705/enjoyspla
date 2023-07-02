@@ -17,13 +17,13 @@ interface ValueDate{
     imageUrl: string;
 }
 
-const weapons:ValueDate[] = [
-    { name: 'ボールドマーカー', imageUrl: '/images/borudomaka.png' },
-    { name: 'ボールドマーカーネオ', imageUrl: '/images/borudomakaneo.png' },
-    { name: 'わかばシューター', imageUrl: '/images/wakabasyuta.png' },
-    { name: 'もみじシューター', imageUrl: '/images/momizisyuta.png' },
-    { name: 'シャープマーカー', imageUrl: '/images/syapumaka.png' },
-];
+// const weapons:ValueDate[] = [
+//     { name: 'ボールドマーカー', imageUrl: '/images/borudomaka.png' },
+//     { name: 'ボールドマーカーネオ', imageUrl: '/images/borudomakaneo.png' },
+//     { name: 'わかばシューター', imageUrl: '/images/wakabasyuta.png' },
+//     { name: 'もみじシューター', imageUrl: '/images/momizisyuta.png' },
+//     { name: 'シャープマーカー', imageUrl: '/images/syapumaka.png' },
+// ];
 
 const rules: ValueDate[] = [
     { name: 'ガチエリア', imageUrl: '/images/gatieria.webp' },
@@ -42,13 +42,15 @@ const Bingo = () => {
         for (let row = 0; row < 5; row++) {
             const newRow: CellData[] = [];
             for (let col = 0; col < 5; col++) {
-                const weapon:ValueDate = getRandomElement(weapons);
+                // const weapon:ValueDate = getRandomElement(weapons);
                 const rule: ValueDate = getRandomElement(rules);
 
                 const cellData: CellData = {
-                    value1: weapon.name,
+                    // value1: weapon.name,
+                    value1: getRandomElementString(initializeWeapons()),
                     value2: rule.name,
-                    value1Image: weapon.imageUrl,
+                    // value1Image: weapon.imageUrl,
+                    value1Image: 'weaponImageUrl',
                     value2Image: rule.imageUrl,
                     marked: false,                   
                 };
@@ -58,7 +60,8 @@ const Bingo = () => {
         }
 
         setBoard(newBoard);
-    },[weapons,rules]);
+    // },[weapons,rules]);
+    },[rules]);
 
     useEffect(() => {
         initializeBoard();
@@ -77,6 +80,11 @@ const Bingo = () => {
     };
 
     const getRandomElement = (array: ValueDate[]) => {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+    };
+
+    const getRandomElementString = (array: string[]) => {
         const randomIndex = Math.floor(Math.random() * array.length);
         return array[randomIndex];
     };
