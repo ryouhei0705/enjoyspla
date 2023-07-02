@@ -88,7 +88,7 @@ const Bingo = () => {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <h1 className={styles.title}>Bingo Game</h1>
+            <h1 className={styles.title}>スプラビンゴ</h1>
             <table className={styles.bingoTable}>
                 <tbody>
                     {board.map((row, rowIndex) => (
