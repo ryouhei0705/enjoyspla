@@ -1,5 +1,6 @@
 import React from 'react';
 import Bingo from './bingo';
+import AmazonAffiliate from './amazonAffiliate';
 import Head from 'next/head';
 import HamburgerMenu from '../components/HamburgerMenu'
 
@@ -13,6 +14,7 @@ const Home = () => {
       </Head>
 
       <Bingo />
+      <AmazonAffiliate />
     </div>
   );
 };
