@@ -8,6 +8,11 @@ const AmazonAffiliate = () => {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
+            <p>
+                このサイトは<a href="https://twitter.com/ryouhei_0705">ryouhei0705</a>が運営しています。また、Amazonのアソシエイトとして、ryouhei0705は適格販売により収入を得ています。
+                <br></br>
+                以下はAmazonリンクです。気になる商品があったらクリックして購入してください。
+            </p>
             <div className={styles.parent}>
                 <div className={styles.child}>
                     <a href="https://www.amazon.co.jp/FUNLAB-%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%82%AB%E3%83%90%E3%83%BC-switch%E6%9C%89%E6%A9%9Fel%E3%83%A2%E3%83%87%E3%83%AB%E5%AF%BE%E5%BF%9C-joy-con%E5%AF%BE%E5%BF%9C-oled%E5%AF%BE%E5%BF%9C%EF%BC%88%E3%82%BF%E3%82%B3%EF%BC%89%E9%BB%84%E8%89%B2%E3%80%81%E7%B4%AB%E8%89%B2/dp/B0BG7YRKF1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=XEH4VYMZQ79I&keywords=%E3%82%B9%E3%83%97%E3%83%A9&qid=1688306946&sprefix=%E3%82%B9%E3%83%97%E3%83%A9%2Caps%2C204&sr=8-21&linkCode=li3&tag=ryouhei0705-22&linkId=fe7707226ef664270ed3741816a83569&language=ja_JP&ref_=as_li_ss_il" target="_blank" rel="noreferrer" ><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BG7YRKF1&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ryouhei0705-22&language=ja_JP" ></img></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=ryouhei0705-22&language=ja_JP&l=li3&o=9&a=B0BG7YRKF1" width="1" height="1"  alt="" ></img>
