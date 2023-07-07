@@ -2,7 +2,7 @@ import React from 'react';
 import Bingo from './bingo';
 import AmazonAffiliate from './amazonAffiliate';
 import Head from 'next/head';
-import HamburgerMenu from '../components/HamburgerMenu'
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -12,7 +12,9 @@ const Home = () => {
         <title>エンジョイスプラ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-
+      <Link href='/about'>
+        このサイトについて
+      </Link>
       <Bingo />
       <AmazonAffiliate />
     </div>
