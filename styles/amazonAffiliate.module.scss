@@ -1,7 +1,5 @@
 .container {
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     max-width: 980px;
     min-height: 100vh;
     margin: auto;
@@ -14,12 +12,10 @@
 }
 
 .child {
-    color: #fff;
-    border: solid 1px #fff;
     text-align: center;
-    line-height: 100px;
-    width: 24%;
-    height: 24%;
+    width: 10%;
+    height: 100%;
     margin: auto;
+    padding: 1rem;
     background-color: #f3f4f6;
 }
