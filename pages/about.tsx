@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from '@/styles/about.module.scss'
 
 const About = () => {
@@ -11,9 +10,6 @@ const About = () => {
                 <title>エンジョイスプラ</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <Link href='/'>
-                スプラビンゴへ
-            </Link>
 
             <div className={styles.subtitle}>
                 サイト管理者

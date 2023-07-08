@@ -12,9 +12,7 @@ const Home = () => {
         <title>エンジョイスプラ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Link href='/about'>
-        このサイトについて
-      </Link>
+
       <Bingo />
       <AmazonAffiliate />
     </div>
