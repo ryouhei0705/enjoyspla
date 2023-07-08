@@ -25,6 +25,12 @@ html {
   font-size: 75%;
 }
 
+footer {
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
 @media screen and (min-width:768px) {
   html {
     /* タブレットビューではベースのfont-sizeは14px相当 */
