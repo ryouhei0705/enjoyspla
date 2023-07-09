@@ -136,6 +136,15 @@ const Bingo = () => {
             >
                 再生成
             </button>
+            
+            <div className={styles.ruleTitle}>
+                遊び方
+            </div>
+            <div className={styles.ruleText}>
+                各マスには,武器とルールがセットになっています。
+                <br></br>
+                マスの武器とルールでゲームに勝利したとき、そのマスを開けてください。
+            </div>
         </div>
     );
 
